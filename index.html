@@ -85,7 +85,7 @@
 				content.classList.remove("landscape")
 			}
 
-			const day = document.querySelector(".header__day")
+			const date = document.querySelector(".header__day")
 			const time = document.querySelector(".header__time")
 			setInterval(() => {
 				const now = new Date()
@@ -94,8 +94,10 @@
 				const year = now.getFullYear()
 				const hour = now.getHours()
 				const minute = now.getMinutes()
-				day.innerHTML = `${day}<span>-</span>${month}<span>-</span>${year}`
-				time.innerText = `${hour}:${minute}`
+				date.innerHTML = `${day < 10 ? "0" + day : day}<span>-</span>${
+					month < 10 ? "0" + month : month
+				}<span>-</span>${year}`
+				time.innerText = `${hour < 10 ? "0" + hour : hour}:${minute < 10 ? "0" + minute : minute}`
 			}, 1000)
 		</script>
 	</body>

@@ -1,0 +1,26 @@
+@font-face {
+	font-family: "BeVietnamPro-Regular";
+	src: url("./src/fonts/BeVietnamPro-Regular.ttf");
+}
+
+@font-face {
+	font-family: "BeVietnamPro-Medium";
+	src: url("./src/fonts/BeVietnamPro-Medium.ttf");
+}
+
+@font-face {
+	font-family: "BeVietnamPro-Bold";
+	src: url("./src/fonts/BeVietnamPro-Bold.ttf");
+}
+
+@font-face {
+	font-family: "Digital";
+	src: url("./src/fonts/Digital.ttf");
+}
+
+body {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	font-family: "BeVietnamPro-Regular";
+}

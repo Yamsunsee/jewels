@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="shortcut icon" href="./src/images/favicon.png" type="image/x-icon" />
+		<link rel="stylesheet" href="./main.min.css" />
+		<title>HẠNH HÒA JEWELRY & DIAMOND</title>
+	</head>
+	<body>
+		<div class="container">
+			<header class="header">
+				<div class="header__top">
+					<div class="header__logo">
+						<img src="./src/images/logo.jpg" alt="logo" />
+					</div>
+					<div class="header__content">
+						<div class="header__brand">HẠNH HÒA JEWELRY & DIAMOND</div>
+						<div class="header__title">BẢNG GIÁ VÀNG</div>
+					</div>
+				</div>
+				<div class="header__bottom">
+					<div class="header__date">
+						<div class="header__day">22<span>-</span>01<span>-</span>2022</div>
+						<div class="header__time">00:00</div>
+					</div>
+					<div class="header__unit">ĐVT: Nghìn</div>
+				</div>
+			</header>
+			<section class="content">
+				<div class="table">
+					<div class="table__title">
+						<div>LOẠI VÀNG</div>
+						<div>ĐVT</div>
+						<div>MUA VÀO</div>
+						<div>BÁN RA</div>
+					</div>
+					<div class="table__data">
+						<div>VÀNG 9999</div>
+						<div>Chỉ (c)</div>
+						<div>4<span>.</span>815</div>
+						<div>5<span>.</span>215</div>
+					</div>
+					<div class="table__data">
+						<div>VÀNG 99</div>
+						<div>Chỉ (c)</div>
+						<div>4<span>.</span>695</div>
+						<div>5<span>.</span>195</div>
+					</div>
+					<div class="table__data">
+						<div>VÀNG 98</div>
+						<div>Chỉ (c)</div>
+						<div>4<span>.</span>665</div>
+						<div>5<span>.</span>165</div>
+					</div>
+					<div class="table__data">
+						<div>VÀNG TÂY</div>
+						<div>Chỉ (c)</div>
+						<div>2<span>.</span>846</div>
+						<div>3<span>.</span>512</div>
+					</div>
+					<div class="table__data">
+						<div>VÀNG 10K</div>
+						<div>Chỉ (c)</div>
+						<div>1<span>.</span>554</div>
+						<div>2<span>.</span>221</div>
+					</div>
+				</div>
+				<div class="image">
+					<img src="./src/images/image.jpg" alt="image" />
+				</div>
+			</section>
+			<footer class="footer">Zalo OA Trang sức HẠNH HÒA - Vui lòng Quét mã và Bấm quan tâm</footer>
+		</div>
+		<script>
+			const width = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth
+			const height = window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight
+			const ratio = width / height
+			const content = document.querySelector(".content")
+
+			if (ratio >= 1) {
+				content.classList.add("landscape")
+			} else {
+				content.classList.remove("landscape")
+			}
+
+			const day = document.querySelector(".header__day")
+			const time = document.querySelector(".header__time")
+			setInterval(() => {
+				const now = new Date()
+				const day = now.getDate()
+				const month = now.getMonth() + 1
+				const year = now.getFullYear()
+				const hour = now.getHours()
+				const minute = now.getMinutes()
+				day.innerHTML = `${day}<span>-</span>${month}<span>-</span>${year}`
+				time.innerText = `${hour}:${minute}`
+			}, 1000)
+		</script>
+	</body>
+</html>

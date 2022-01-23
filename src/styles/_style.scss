@@ -7,14 +7,16 @@
 	.header {
 		background-color: $grey;
 		color: #fff;
-		padding: 2vw;
+		padding: max(2vw, 2vh);
 		display: grid;
 		grid-template-rows: 4fr 1fr;
-		gap: 1vw;
+		gap: max(1vw, 1vh);
 
 		&__top {
-			position: relative;
 			height: 100%;
+			display: flex;
+			align-items: center;
+			justify-content: center;
 		}
 
 		&__content {
@@ -23,17 +25,17 @@
 			flex-direction: column;
 			justify-content: center;
 			align-items: center;
-			gap: 1vw;
+			gap: max(1vw, 1vh);
 		}
 
 		&__logo {
-			position: absolute;
-			height: 100%;
+			height: min-content;
 			display: flex;
 			align-items: center;
+			margin-right: max(1vw, 1vh);
 
 			img {
-				height: 75%;
+				height: max(10vh, 10vw);
 			}
 		}
 		&__brand {
@@ -170,6 +172,7 @@
 		display: flex;
 		justify-content: center;
 		align-items: center;
+		text-align: center;
 		font-family: "BeVietnamPro-Bold";
 		font-size: max(2vw, 1.5vh);
 		color: $yellow;

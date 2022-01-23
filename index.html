@@ -74,20 +74,20 @@
 			<footer class="footer">Zalo OA Trang sức HẠNH HÒA - Vui lòng Quét mã và Bấm quan tâm</footer>
 		</div>
 		<script>
-			const width = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth
-			const height = window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight
-			const ratio = width / height
 			const content = document.querySelector(".content")
-
-			if (ratio >= 1) {
-				content.classList.add("landscape")
-			} else {
-				content.classList.remove("landscape")
-			}
-
 			const date = document.querySelector(".header__day")
 			const time = document.querySelector(".header__time")
+
 			setInterval(() => {
+				const width = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth
+				const height = window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight
+				const ratio = width / height
+				if (ratio >= 1) {
+					content.classList.add("landscape")
+				} else {
+					content.classList.remove("landscape")
+				}
+
 				const now = new Date()
 				const day = now.getDate()
 				const month = now.getMonth() + 1

@@ -36,7 +36,7 @@
 			margin-right: max(1vw, 1vh);
 
 			img {
-				height: min(10vh, 10vw);
+				height: min(15vh, 15vw);
 			}
 		}
 		&__brand {
@@ -49,7 +49,7 @@
 		&__title {
 			color: $yellow;
 			font-family: "BeVietnamPro-Bold";
-			font-size: min(10vw, 8vh);
+			font-size: min(10vw, 6vh);
 			text-align: center;
 		}
 		&__bottom {

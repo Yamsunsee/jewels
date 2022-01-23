@@ -79,8 +79,8 @@
 			const time = document.querySelector(".header__time")
 
 			setInterval(() => {
-				const width = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth
-				const height = window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight
+				const width = document.documentElement.clientWidth || document.body.clientWidth
+				const height = document.documentElement.clientHeight || document.body.clientHeight
 				const ratio = width / height
 				if (ratio >= 1) {
 					content.classList.add("landscape")

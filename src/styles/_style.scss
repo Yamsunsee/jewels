@@ -61,7 +61,7 @@
 			font-family: "Digital";
 			display: flex;
 			align-items: center;
-			font-size: max(2vw, 2vh);
+			font-size: min(8vw, 4vh);
 		}
 		&__day {
 			margin-right: 1vw;
@@ -74,7 +74,7 @@
 		}
 
 		&__unit {
-			font-size: max(1vw, 1vh);
+			font-size: min(4vw, 2vh);
 		}
 	}
 
